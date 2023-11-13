@@ -171,7 +171,7 @@ body{
 
 /*--------------СЕТКА 320---------------*/
 
-@media (min-width:320px){
+@media (max-width:767px){
   
     .header__contacts-side{
         display: none;
@@ -209,7 +209,7 @@ body{
     }
 
     .illustraton{
-        width: 320px;
+        min-width: 320px;
     }
     .illustraton__img{
         width: 100%;
@@ -254,6 +254,12 @@ body{
 
         overflow:hidden;
     }
+
+    .text-content{
+        padding-top: 10px;
+        margin-left: 16px;
+    }
+
     .illustraton{
         width: 360px;
         margin-left:40px;
@@ -288,6 +294,9 @@ body{
         display:none;
     }
 
+    .slide-menu{
+        margin-left: 24px;
+    }
     .repair-side--hidden{
         display: flex;
         justify-content: space-around;
@@ -304,6 +313,10 @@ body{
         height: 160px;
 
         overflow:hidden;
+    }
+    .text-content{
+        padding-top: 20px;
+        margin-left: 24px;
     }
     .illustraton{
         width: 531px;
