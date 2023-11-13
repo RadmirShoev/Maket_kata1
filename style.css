@@ -85,7 +85,7 @@ body{
     /*сброс стиля фокуса*/
         outline: none;
     
-        background: url(/images/icon.svg) no-repeat left center;
+        background: url(images/icon.svg) no-repeat left center;
         width: 132px;
         height: 24px;
         display: inline-block;
@@ -101,7 +101,7 @@ body{
 
 /*----ЗАГОЛОВОК----*/
 .title{
-    background: url('/images/highlight.svg') no-repeat left center;
+    background: url('images/highlight.svg') no-repeat left center;
     display: flex;
     justify-content: space-between;
 }
