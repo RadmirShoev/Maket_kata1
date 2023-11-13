@@ -1,0 +1,318 @@
+/*Сперва  общая стилизация, цвета рамки, кнопки и тд*/
+html {
+font-family: 'TT Lakes', 'Open Sans', 'Arial', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: 2px solid #D9FFF5;
+    
+    width: 100%;
+    min-width: 320px;
+    min-height: 88px;
+}
+
+
+/*Круглые розовые кнопки*/
+.circle-button{
+/*сброс базовых стилей кнопок*/
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+/*сброс стиля фокуса*/
+    outline: none;
+
+    margin-right: 16px;
+}
+
+/*---------------Часть шапки с лого---------------*/
+
+.logo-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+/*-------------Часть шапки с чатом, звонком и профилем----*/
+.contacts-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+} 
+
+/*------------Часть шапки с ремонтов--------*/
+
+.repair-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deliver{
+    margin-right: 16px;
+}
+/*-----------------------КНОПКА ЧИТАТЬ ДАЛЕЕ----------------*/
+.button-text{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    font-weight: 600;
+    color: #1B1C21;
+    padding: 12px;
+    align-self: center;
+}
+
+.read-more-button{
+    /*сброс базовых стилей кнопок*/
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+    
+    /*сброс стиля фокуса*/
+        outline: none;
+    
+        background: url(/images/icon.svg) no-repeat left center;
+        width: 132px;
+        height: 24px;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-left: 16px;
+    }
+
+.button-text:hover{
+    font-style: italic ;
+}
+
+
+/*----ЗАГОЛОВОК----*/
+.title{
+    background: url('/images/highlight.svg') no-repeat left center;
+    display: flex;
+    justify-content: space-between;
+}
+.title__text{
+    font-size: 28px;
+    line-height: 40px;
+    text-align: right;
+    color: #1B1C21; 
+    margin-left: 20px; 
+    
+}
+
+/*-------------------НАВИГАЦИЯ по ссылкам----------------*/
+.slide-menu{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    min-width: 504px;
+    height: 40px;
+    margin-left: 16px;
+    overflow: hidden;
+
+}
+
+.slide-menu__link{
+    color: #7E7E82;
+    text-decoration: inherit; 
+    font-family: TT Lakes;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    padding: 8px 12px;
+    min-width:fit-content;
+
+    overflow:visible;
+
+    display:flex;
+    align-items: center;
+}
+
+.slide-menu__link--selected {
+    border: 2px solid #B8FFEC ;
+    border-radius: 5px;
+}
+
+.slide-menu__link:hover{
+    color: black;
+}
+
+/*-------------ОСНОВНОЙ СЛАЙД----------*/
+
+.main-slide{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-content{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left; 
+}
+
+.text-content__text{
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------СЕТКА 320---------------*/
+
+@media (min-width:320px){
+  
+    .header__contacts-side{
+        display: none;
+    }
+
+    .logo-side__deliver{
+        display: none;
+    }
+
+    .slide-menu__link--hiden-320{
+        display: none;
+    }
+
+    .repair-side--hidden{
+        display: none;
+    }
+
+    .main-slide{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    
+    .main-slide__text-content{
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .main-text{
+        display: none;
+    }
+    .text{
+        line-height: 18px;
+    }
+
+    .illustraton{
+        width: 320px;
+    }
+    .illustraton__img{
+        width: 100%;
+        padding-top: 20px;
+    }
+}
+
+/*--------------СЕТКА 768---------------*/
+
+@media (min-width:768px){
+    .slide-menu__link--hiden-320{
+        display: none;
+    }
+
+    .header__contacts-side{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .logo-side__deliver{
+        display: flex;
+    }
+
+    .repair-side--hidden{
+        display: none;
+    }
+
+    .main-slide{
+        width: 100%;
+        min-width: 768px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        padding-top:32px;
+    }
+
+    .text-content__text{
+        width:312px;
+        height: 160px;
+
+        overflow:hidden;
+    }
+    .illustraton{
+        width: 360px;
+        margin-left:40px;
+        margin-right:40px;
+    }
+    .illustraton__img{
+        width: 360px;
+        height: 220px;
+        padding-top: 20px;
+    }
+    
+    .main-text{
+        display: block;
+    }
+    .text{
+        line-height: 20px;
+    }
+}
+
+/*--------------СЕТКА 1120---------------*/
+@media (min-width:1120px){
+
+    .slide-menu__link--hiden-320{
+        display: block;
+    }
+
+    .slide-menu__link--hiden-1120{
+        display:none;
+    }
+
+    .header{
+        display:none;
+    }
+
+    .repair-side--hidden{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .circle-button--with-text{
+        display: flex;
+        align-items: center;
+    }
+
+    .text-content__text{
+        width: 490px;
+        height: 160px;
+
+        overflow:hidden;
+    }
+    .illustraton{
+        width: 531px;
+        margin-left:40px;
+        margin-right:40px;
+    }
+    .illustraton__img{
+        width: 531px;
+        height: 320px;
+        padding-top: 20px;
+    }
+}
