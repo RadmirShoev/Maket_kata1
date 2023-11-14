@@ -5,6 +5,8 @@ font-family: 'TT Lakes', 'Open Sans', 'Arial', sans-serif;
 body{
     padding: 0;
     margin: 0;
+    background-color:#F8F8F8;
+    ;
 }
 
 .header{
@@ -20,6 +22,7 @@ body{
 
 
 /*Круглые розовые кнопки*/
+
 .circle-button{
 /*сброс базовых стилей кнопок*/
     padding: 0;
@@ -31,8 +34,31 @@ body{
 /*сброс стиля фокуса*/
     outline: none;
 
+    width: 40px;
+    height: 40px;
     margin-right: 16px;
 }
+/*------------Подгружаем иконки кнопок----------*/
+
+.circle-button--burger-img{
+    background: url(images/burger.svg) no-repeat center center;
+}
+.circle-button--call-img{
+    background: url(images/call.svg) no-repeat center center;
+}
+.circle-button--chat-img{
+    background: url(images/chat.svg) no-repeat center center;
+}
+.circle-button--profile-img{
+    background: url(images/profile.svg) no-repeat center center;
+}
+.circle-button--repair-img{
+    background: url(images/repair.svg) no-repeat center center;
+}
+.circle-button--checkstatus-img{
+    background: url(images/checkstatus.svg) no-repeat center center;
+}
+
 
 /*---------------Часть шапки с лого---------------*/
 
@@ -48,7 +74,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 } 
 
 /*------------Часть шапки с ремонтов--------*/
@@ -59,9 +84,7 @@ body{
     justify-content: space-between;
 }
 
-.deliver{
-    margin-right: 16px;
-}
+
 /*-----------------------КНОПКА ЧИТАТЬ ДАЛЕЕ----------------*/
 .button-text{
     font-size: 16px;
@@ -69,7 +92,6 @@ body{
     text-align: right;
     font-weight: 600;
     color: #1B1C21;
-    padding: 12px;
     align-self: center;
 }
 
@@ -110,23 +132,23 @@ body{
     line-height: 40px;
     text-align: right;
     color: #1B1C21; 
-    margin-left: 20px; 
+    padding-left: 20px; 
     
 }
 
 /*-------------------НАВИГАЦИЯ по ссылкам----------------*/
-.slide-menu{
+.nav{
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     min-width: 504px;
     height: 40px;
-    margin-left: 16px;
-    overflow: scroll;
+    padding-left: 16px;
+    overflow-x: scroll;
 
 }
 
-.slide-menu__link{
+.nav__link{
     color: #7E7E82;
     text-decoration: inherit; 
     font-family: TT Lakes;
@@ -142,12 +164,12 @@ body{
     align-items: center;
 }
 
-.slide-menu__link--selected {
+.nav__link--selected {
     border: 2px solid #B8FFEC ;
     border-radius: 5px;
 }
 
-.slide-menu__link:hover{
+.nav__link:hover{
     color: black;
 }
 
@@ -156,6 +178,7 @@ body{
 .main-slide{
     display: flex;
     justify-content: space-between;
+    padding-top: 0;
 }
 
 .text-content{
@@ -173,15 +196,23 @@ body{
 
 @media (max-width:767px){
   
+    .body-container{
+        min-width: 320px;
+    }
+
     .header__contacts-side{
         display: none;
     }
 
-    .logo-side__deliver{
-        display: none;
+    /*Вертикальный разделитель слева от repair-side*/
+    .header__repair-side::before{
+        content: '';
+        height: 100%;
+        width: 22px;
+        background: url(images/divider.svg) no-repeat left 50%;
     }
 
-    .slide-menu__link--hiden-320{
+    .nav__link--hiden-320{
         display: none;
     }
 
@@ -197,8 +228,8 @@ body{
     }
     
     .main-slide__text-content{
-        margin-right: 16px;
-        margin-left: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
     }
 
     .main-text{
@@ -220,17 +251,27 @@ body{
 /*--------------СЕТКА 768---------------*/
 
 @media (min-width:768px){
-    .slide-menu__link--hiden-320{
+
+    .logo-img{
+        padding-left: 22px;
+        background: url(images/divider.svg) no-repeat left 50%;
+    }
+
+    /*Вертикальный разделитель слева от repair-side*/
+    .header__repair-side::before{
+        content: '';
+        height: 100%;
+        width: 22px;
+        background: url(images/divider.svg) no-repeat left 50%;
+    }
+
+    .nav__link--hiden-320{
         display: none;
     }
 
     .header__contacts-side{
         display: flex;
         margin-left: auto;
-    }
-
-    .logo-side__deliver{
-        display: flex;
     }
 
     .repair-side--hidden{
@@ -245,7 +286,6 @@ body{
         justify-content: space-between;
         flex-wrap: nowrap;
         align-items: flex-start;
-        padding-top:32px;
     }
 
     .text-content__text{
@@ -257,13 +297,13 @@ body{
 
     .text-content{
         padding-top: 10px;
-        margin-left: 16px;
+        padding-left: 16px;
     }
 
     .illustraton{
         width: 360px;
-        margin-left:40px;
-        margin-right:40px;
+        padding-left:40px;
+        padding-right:40px;
     }
     .illustraton__img{
         width: 360px;
@@ -282,31 +322,39 @@ body{
 /*--------------СЕТКА 1120---------------*/
 @media (min-width:1120px){
 
-    .slide-menu__link--hiden-320{
-        display: block;
-    }
-
-    .slide-menu__link--hiden-1120{
-        display:none;
-    }
-
     .header{
         display:none;
     }
 
-    .slide-menu{
-        margin-left: 24px;
+    .nav__link--hiden-320{
+        display: block;
+    }
+
+    .nav__link--hiden-1120{
+        display:none;
+    }
+
+    .nav{
+        padding-left: 24px;
         overflow: visible;
+        flex-wrap: wrap;
+        width: 1063px;
+        height: 82px;
+        flex-shrink: 0;
     }
     .repair-side--hidden{
         display: flex;
-        justify-content: space-around;
+        width: 380px;
+        justify-content: space-between;
         align-items: center;
     }
 
     .circle-button--with-text{
         display: flex;
         align-items: center;
+
+        width: 173px;
+        background-position: right 50%;
     }
 
     .text-content__text{
@@ -316,13 +364,12 @@ body{
         overflow:hidden;
     }
     .text-content{
-        padding-top: 20px;
-        margin-left: 24px;
+        padding-right: 24px;
     }
     .illustraton{
         width: 531px;
-        margin-left:40px;
-        margin-right:40px;
+        padding-left:40px;
+        padding-right:40px;
     }
     .illustraton__img{
         width: 531px;

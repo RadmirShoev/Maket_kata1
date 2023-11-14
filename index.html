@@ -10,53 +10,42 @@
 </head>
 
 <body>
+<div class="body-container">
 
     <header class="header">
 
         <!--Часть шапки с логотипом-->
         <section class="logo-side header__logo-side">
 
-            <button class="circle-button"> 
-                <img src="images/burger.svg" alt="" class="circle-button__icon">
-            </button>
+            <button class="circle-button circle-button--burger-img "> </button>
 
-            <img src="images/divider.svg" alt="" class="deliver logo-side__deliver">
-
-            <img  class="logo__img"   src="images/Group.svg" alt="Логотип CPS" >
+            
+             <a class="logo-link" href=""> 
+                <img  class="logo-img"   src="images/Group.svg" alt="Логотип CPS" >
+            </a>
+            
 
         </section>
 
         <!--Часть шапки с тремя кнопками, звонок, чат профиль-->
         <section class="contacts-side header__contacts-side">
            
-                <button class="circle-button"> 
-                    <img src="images/call.svg" alt="" class="circle-button__icon">
-                </button>
+                <button class="circle-button circle-button--call-img"> </button>
                
                
-                <button class="circle-button"> 
-                    <img src="images/chat.svg" alt="" class="circle-button__icon">
-                </button>
+                <button class="circle-button circle-button--chat-img"> </button>
                 
 
-                <button class="circle-button"> 
-                    <img src="images/profile.svg" alt="" class="circle-button__icon">
-                </button>
+                <button class="circle-button circle-button--profile-img"> </button>
 
         </section>   
         
         <!--Часть шапки с двумя кнопками ремонт проверка статуса-->
         <section class="repair-side header__repair-side">
-                
-                <img src="images/divider.svg" alt="" class="deliver repair-side__deliver ">
 
-                <button class="circle-button"> 
-                    <img src="images/repair.svg" alt="" class="circle-button__icon">
-                </button>
+                <button class="circle-button  circle-button--repair-img"> </button>
                 
-                <button class="circle-button"> 
-                    <img src="images/checkstatus.svg" alt="" class="circle-button__icon">
-                </button>
+                <button class="circle-button circle-button--checkstatus-img"> </button>
 
         </section>
 
@@ -73,28 +62,28 @@
 
             <section class="repair-side repair-side--hidden">
                 
-                <button class="circle-button circle-button--with-text"> 
+                <button class="circle-button circle-button--with-text circle-button--repair-img"> 
                     <span class="button-text"> Оставить заявку</span>
-                    <img src="images/repair.svg" alt="" class="circle-button__icon">
+                
                 </button>
                 
-                <button class="circle-button circle-button--with-text"> 
+                <button class="circle-button circle-button--with-text circle-button--checkstatus-img"> 
                     <span class="button-text"> Статус ремонта</span>
-                    <img src="images/checkstatus.svg" alt="" class="circle-button__icon">
+
                 </button>
 
         </section>
 
         </div>
         
-        <nuv class="slide-menu">
-            <a class="slide-menu__link slide-menu__link--selected " href=""> Ремонтируемые бренды </a>
-            <a class="slide-menu__link slide-menu__link--hiden-1120" href=""> Дополнительные услуги </a>
-            <a class="slide-menu__link slide-menu__link--hiden-320" href=""> Ремонтируемые устройства </a>
-            <a class="slide-menu__link " href=""> Цены на услуги </a>
-            <a class="slide-menu__link " href=""> Адреса сервесных центров </a>
-            <a class="slide-menu__link " href=""> Специальные цены </a>
-            <a class="slide-menu__link " href=""> Отзывы</a>
+        <nuv class="nav">
+            <a class="nav__link nav__link--selected " href=""> Ремонтируемые бренды </a>
+            <a class="nav__link nav__link--hiden-1120" href=""> Дополнительные услуги </a>
+            <a class="nav__link nav__link--hiden-320" href=""> Ремонтируемые устройства </a>
+            <a class="nav__link " href=""> Цены на услуги </a>
+            <a class="nav__link " href=""> Адреса сервесных центров </a>
+            <a class="nav__link " href=""> Специальные цены </a>
+            <a class="nav__link " href=""> Отзывы</a>
         </nuv>
         
 
@@ -138,7 +127,7 @@
 
 
 
-
+</div>
 </body>
 
 
