@@ -5,8 +5,6 @@ font-family: 'TT Lakes', 'Open Sans', 'Arial', sans-serif;
 body{
     padding: 0;
     margin: 0;
-    background-color:#F8F8F8;
-    ;
 }
 
 .header{
@@ -18,11 +16,16 @@ body{
     width: 100%;
     min-width: 320px;
     min-height: 88px;
+
+    background-color: #FFFFFF;
+    
 }
 
+.main-container{
+    background-color:#F8F8F8;
+}
 
 /*Круглые розовые кнопки*/
-
 .circle-button{
 /*сброс базовых стилей кнопок*/
     padding: 0;
@@ -167,6 +170,7 @@ body{
 .nav__link--selected {
     border: 2px solid #B8FFEC ;
     border-radius: 5px;
+    background-color: #FFFFFF;
 }
 
 .nav__link:hover{
