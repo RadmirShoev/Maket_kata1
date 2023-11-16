@@ -158,7 +158,6 @@ margin-right: 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    height: 40px;
     padding-left: 16px;
     overflow-x: scroll;
 }
