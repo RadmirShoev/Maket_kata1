@@ -21,6 +21,10 @@ body{
     background-color: #FFFFFF;
 }
 
+.header__contacts-side{
+margin-right: 20px;
+}
+
 .main-container{
     background-color:#F8F8F8;
     width: 100%;
@@ -41,8 +45,18 @@ body{
 
     width: 40px;
     height: 40px;
-    margin-right: 16px;
 }
+
+.circle-button--with-text{
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    font-weight: 600;
+    color: #1B1C21;
+    align-self: center;
+}
+
+
 /*------------Подгружаем иконки кнопок----------*/
 
 .circle-button--burger-img{
@@ -70,15 +84,16 @@ body{
 .logo-side{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 16px;
-    margin-right: 16px;
+    justify-content: space-evenly;
+    gap:16px;
 }
+
 /*-------------Часть шапки с чатом, звонком и профилем----*/
 .contacts-side{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap:16px;
 } 
 
 /*------------Часть шапки с ремонтов--------*/
@@ -86,19 +101,12 @@ body{
 .repair-side{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap:16px;
 }
 
 
 /*-----------------------КНОПКА ЧИТАТЬ ДАЛЕЕ----------------*/
-.button-text{
-    font-size: 16px;
-    line-height: 24px;
-    text-align: right;
-    font-weight: 600;
-    color: #1B1C21;
-    align-self: center;
-}
 
 .read-more-button{
     /*сброс базовых стилей кнопок*/
@@ -113,18 +121,21 @@ body{
         outline: none;
     
         background: url(images/icon.svg) no-repeat left center;
-        width: 132px;
+        width: 140px;
         height: 24px;
-        display: inline-block;
-        margin-bottom: 20px;
-        margin-top: 10px;
-        margin-left: 16px;
+        display: block;
+
+        font-size: 16px;
+        line-height: 24px;
+        text-align: right;
+        font-weight: 600;
+        color: #1B1C21;
+        align-self: center;
     }
 
-.button-text:hover{
-    font-style: italic ;
+.text-content__read-more-button{
+    margin-top: 10px;
 }
-
 
 /*----ЗАГОЛОВОК----*/
 .title{
@@ -143,22 +154,16 @@ body{
 
 /*-------------------НАВИГАЦИЯ по ссылкам----------------*/
 .nav{
+    list-style-type: none;   /*убирает точки элементов списка*/
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     height: 40px;
     padding-left: 16px;
     overflow-x: scroll;
-
 }
 
-.nav__link{
-    color: #7E7E82;
-    text-decoration: inherit; 
-    font-family: TT Lakes;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: left;
+.nav__item{
     padding: 8px 12px;
     min-width:fit-content;
 
@@ -166,7 +171,16 @@ body{
     align-items: center;
 }
 
-.nav__link--selected {
+.nav__link{
+    color: #7E7E82;
+    text-decoration: inherit; 
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.nav__item--selected {
     border: 2px solid #B8FFEC ;
     border-radius: 5px;
     background-color: #FFFFFF;
@@ -197,7 +211,7 @@ body{
 
 /*--------------СЕТКА 320---------------*/
 
-@media (max-width:767px){
+@media (max-width:768px){
   
     .body-container{
         min-width: 320px;
@@ -207,15 +221,23 @@ body{
         display: none;
     }
 
+    .header__logo-side{
+        margin-left: 16px;
+    }
+
+    .header__repair-side{
+        margin-right: 16px;
+    }
+
     /*Вертикальный разделитель слева от repair-side*/
     .header__repair-side::before{
         content: '';
         height: 100%;
-        width: 22px;
+        width: 8px;
         background: url(images/divider.svg) no-repeat left 50%;
     }
 
-    .nav__link--hiden-320{
+    .nav__item--hiden-320{
         display: none;
     }
 
@@ -244,10 +266,14 @@ body{
 
     .illustraton{
         min-width: 320px;
+        overflow: hidden;
     }
     .illustraton__img{
         width: 100%;
+        max-width: 500px;
+        max-height: 250px;
         padding-top: 20px;
+
     }
 }
 
@@ -259,16 +285,21 @@ body{
         padding-left: 22px;
         background: url(images/divider.svg) no-repeat left 50%;
     }
-
+    .header__logo-side{
+        margin-left: 24px;
+    }
+    .header__repair-side{
+        margin-right: 24px;
+    }
     /*Вертикальный разделитель слева от repair-side*/
     .header__repair-side::before{
         content: '';
         height: 100%;
-        width: 22px;
+        width: 8px;
         background: url(images/divider.svg) no-repeat left 50%;
     }
 
-    .nav__link--hiden-320{
+    .nav__item--hiden-320{
         display: none;
     }
 
@@ -310,7 +341,7 @@ body{
     }
     .illustraton__img{
         width: 360px;
-        height: 220px;
+        height: auto;
         padding-top: 20px;
     }
     
@@ -329,11 +360,15 @@ body{
         display:none;
     }
 
-    .nav__link--hiden-320{
+    .title__repair-side{
+        margin-right:32px;
+    }
+
+    .nav__item--hiden-320{
         display: block;
     }
 
-    .nav__link--hiden-1120{
+    .nav__item--hiden-1120{
         display:none;
     }
 
@@ -376,7 +411,7 @@ body{
     }
     .illustraton__img{
         width: 531px;
-        height: 320px;
+        height: auto;
         padding-top: 20px;
     }
 }
