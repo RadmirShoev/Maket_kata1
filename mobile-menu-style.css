@@ -1,0 +1,136 @@
+/*-----------Общий блок для меню--------*/
+.mobile-menu{
+    position: absolute;
+    margin: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    left:0;
+    top:0;
+    width: 320px;
+    height: 100%;
+    max-height: 1124px;
+    background: #FFF;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20), 
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+    color: #1B1C21;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/*-----------Стили Круглых розовых кнопок-----------*/
+
+.circle-button{
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+    
+        width: 40px;
+        height: 40px;
+    }
+
+.circle-button:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition-duration: 0.2s;
+}
+
+    /*------------Подгружаем иконки кнопок----------*/
+
+    .circle-button--close-img {
+        background: url(images/close.svg) no-repeat center center;
+    }
+    .circle-button--call-img{
+        background: url(images/call.svg) no-repeat center center;
+    }
+    .circle-button--chat-img{
+        background: url(images/chat.svg) no-repeat center center;
+    }
+    .circle-button--profile-img{
+        background: url(images/profile.svg) no-repeat center center;
+    }
+    .circle-button--search-img{
+        background: url(images/search.svg) no-repeat center center;
+    }
+
+    /*---------СТИЛИ ШАПКИ------------*/
+    .mobile-menu__header{
+        width: 100%;
+        margin-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+    .header__logo-link{
+        display: inline-block;
+        margin-right: auto;
+    }
+    
+
+
+    /*----------СТИЛИ МЕНЮ-------------------*/
+    .item{ /*сброс стилей элементов списка*/
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+        
+    .main-menu__link{/*сброс стилей ссылок*/
+            text-decoration: none;
+            color: #1B1C21;
+    }
+
+    .main-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-menu__main-menu{
+        margin-top: 18px;
+    }
+
+    .main-menu__item{
+        margin-top: 32px;
+    }
+
+    .main-menu__item--active{
+        background: url('images/highlight.svg') no-repeat left center;
+        transform: translate(-24px);
+        padding: 8px 24px;
+        margin-top: 24px ;
+    }
+    .main-menu__item:hover{
+        transform: scale(1.1);
+        opacity: 0.6;
+    }
+
+    /*--------------СТИЛИ ПОДВАЛА----------------*/
+    .mobile-menu__footer{
+        margin-top: auto;
+    }
+    .footer__contacts-side{
+        display: flex;
+        justify-content: flex-start;
+        gap: 16px;
+        padding: 0;
+    }
+    .lang-side {
+        display: flex;
+        justify-content: flex-start;
+        gap: 7px;
+        padding: 0;
+    }
