@@ -89,7 +89,7 @@
         list-style: none;
     }
         
-    .main-menu__link{/*сброс стилей ссылок*/
+    .link{/*сброс стилей всех ссылок*/
             text-decoration: none;
             color: #1B1C21;
     }
@@ -106,7 +106,9 @@
     .main-menu__item{
         margin-top: 32px;
     }
-
+    .main-menu__link--active{
+        color:  #7E7E82;
+    }
     .main-menu__item--active{
         background: url('images/highlight.svg') no-repeat left center;
         transform: translate(-24px);
@@ -114,8 +116,7 @@
         margin-top: 24px ;
     }
     .main-menu__item:hover{
-        transform: scale(1.1);
-        opacity: 0.6;
+        text-shadow: 0 0 5px #7E7E82;
     }
 
     /*--------------СТИЛИ ПОДВАЛА----------------*/
@@ -136,4 +137,20 @@
         gap: 7px;
         padding: 0;
         padding-top: 40px;
+    }
+    .lang-button{
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none; 
+    }
+    .lang-button--active{
+        color:  #7E7E82;
+    }
+    .lang-button:hover{
+        transform: translatey(-5px);
+        border-bottom:1px solid #1B1C21;
     }
