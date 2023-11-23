@@ -7,6 +7,7 @@
     left:0;
     top:0;
     width: 320px;
+    box-sizing: border-box;
     height: 100%;
     max-height: 1124px;
     background: #FFF;
@@ -122,6 +123,10 @@
     /*--------------СТИЛИ ПОДВАЛА----------------*/
     .mobile-menu__footer{
         margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:16px;
     }
 
     .footer__contacts-side{
@@ -130,7 +135,18 @@
         gap: 16px;
         padding: 0;
     }
+    .email-link{
+        display: block;
+    }
 
+    .phone-number-link{
+        display: block;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+    }
     .lang-side {
         display: flex;
         justify-content: flex-start;
@@ -152,5 +168,5 @@
     }
     .lang-button:hover{
         transform: translatey(-5px);
-        border-bottom:1px solid #1B1C21;
+        text-shadow: 0 0 5px #7E7E82;
     }
