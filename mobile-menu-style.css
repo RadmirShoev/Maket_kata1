@@ -109,6 +109,7 @@
     }
     .main-menu__link--active{
         color:  #7E7E82;
+        cursor: default;
     }
     .main-menu__item--active{
         background: url('images/highlight.svg') no-repeat left center;
@@ -116,7 +117,7 @@
         padding: 8px 24px;
         margin-top: 24px ;
     }
-    .main-menu__item:hover{
+    .main-menu__item:hover:not(.main-menu__item--active){
         text-shadow: 0 0 5px #7E7E82;
     }
 
@@ -154,19 +155,13 @@
         padding: 0;
         padding-top: 40px;
     }
-    .lang-button{
-        padding: 0;
-        border: none;
-        font: inherit;
-        color: inherit;
-        background-color: transparent;
-        cursor: pointer;
-        outline: none; 
-    }
-    .lang-button--active{
+    .lang-link--active{
         color:  #7E7E82;
+        cursor: default;
     }
-    .lang-button:hover{
+    
+    .lang-link:hover:not(.lang-link--active){
+        display: block;
         transform: translatey(-5px);
         text-shadow: 0 0 5px #7E7E82;
     }
