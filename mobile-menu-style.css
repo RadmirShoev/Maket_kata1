@@ -109,15 +109,16 @@
     }
     .main-menu__link--active{
         color:  #7E7E82;
-        cursor: default;
+        pointer-events: none;
     }
     .main-menu__item--active{
         background: url('images/highlight.svg') no-repeat left center;
         transform: translate(-24px);
         padding: 8px 24px;
         margin-top: 24px ;
+        pointer-events: none;
     }
-    .main-menu__item:hover:not(.main-menu__item--active){
+    .main-menu__item:hover{
         text-shadow: 0 0 5px #7E7E82;
     }
 
@@ -157,10 +158,10 @@
     }
     .lang-link--active{
         color:  #7E7E82;
-        cursor: default;
+        pointer-events: none;
     }
     
-    .lang-link:hover:not(.lang-link--active){
+    .lang-link:hover{
         display: block;
         transform: translatey(-5px);
         text-shadow: 0 0 5px #7E7E82;
