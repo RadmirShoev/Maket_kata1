@@ -61,6 +61,10 @@ let swiperInit = function(){
 
     let swiper = new Swiper('.swiper', {
 
+        slidesPerView: 2,
+        spaceBetween: 150,
+        loop: true,
+
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
