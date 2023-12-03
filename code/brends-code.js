@@ -33,7 +33,6 @@ readMoreButton.addEventListener('click', function() {
 
 /*---------------ОСНОВНАЯ ПРОГРАММА СО СВАЙПЕРОМ------------*/
 
-
 //Функция добавления классов свайпера
  function addSwiperClasses() {
     //Находим основные контейнеры для элементов Свайпера
@@ -61,7 +60,7 @@ readMoreButton.addEventListener('click', function() {
 let swiperInit = function(){
 
     let swiper = new Swiper('.swiper', {
-        // If we need pagination
+
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
@@ -116,11 +115,12 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
-
 // Запуск свайпера при РЕСАЙЗЕ
 window.addEventListener('resize', function() {
     let windowWidth = document.documentElement.clientWidth;
+
     console.log('Включаем свайпер при ресайзе');
+
     addSwiperClasses();
     let globalSwiper = swiperInit();
         

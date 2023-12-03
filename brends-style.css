@@ -143,9 +143,11 @@ html {
     .swiper{
         height: 120px;
     }
+
     .swiper-slide{
         max-width: 240px;
     }
+
     .swiper-pagination-bullet-active{
         background-color: #B5B6BC;
     }
