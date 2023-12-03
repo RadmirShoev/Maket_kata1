@@ -31,7 +31,6 @@ html {
     flex-wrap: wrap;
     column-gap: 32px;
     row-gap: 16px;
-    
 }
 
 .brends-list--show-part{ /*МОДИФИКАТОР ПОКАЗАТЬ ЧАСТЬ ЭЛЕМЕНТОВ*/
@@ -49,7 +48,7 @@ html {
     list-style: none;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
     
@@ -70,6 +69,8 @@ html {
     border: 2px solid #FF3E79;
     background: url(images/brends/link-arroy.svg) no-repeat center center;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: 16px;
 }
 .brends-list__link:hover{
     transform: scale(1.1);
@@ -78,6 +79,7 @@ html {
 }
 .brend__img{
     box-sizing: border-box;
+    margin-left: 16px;
 }
 
 .read-more-button{
@@ -91,8 +93,7 @@ html {
     
     /*сброс стиля фокуса*/
         outline: none;
-    
-        background: url(images/icon.svg) no-repeat left center;
+        background: url(images/read-more-close.svg) no-repeat left center;
         height: 24px;
         padding-left: 18px;
         display: block;
@@ -105,32 +106,85 @@ html {
         align-self: center;
     }
 
+    .read-more-button--open{
+        background: url(images/read-more-open.svg) no-repeat left center;
+        padding-left: 22px;
+    }
+
+    .read-more-button--close{
+        background: url(images/read-more-close.svg) no-repeat left center;
+    }
+
+    .read-more-button:hover{
+        opacity: 0.7;
+    }
+
 .footer__read-more-button {
     margin-top: 24px;
     margin-left: 32px;
 }
 
 /*--------------СЕТКА 320---------------*/
+@media (max-width:767.98px){
+    .header__title{
+        padding-left: 16px ;
+    }
 
-@media (max-width:768px){
-  
+    .brends-list{
+        margin: 0;
+        padding-top: 16px;
+        padding-left: 16px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        column-gap: 16px;
+        width: 0%;
+    }
+    .swiper{
+        height: 120px;
+    }
+    .swiper-slide{
+        max-width: 240px;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #B5B6BC;
+    }
+
+    .brends-list__brend{
+        min-width: 240px;
+    }
+    .brends-list--show-part{ /*МОДИФИКАТОР ПОКАЗАТЬ ЧАСТЬ ЭЛЕМЕНТОВ*/
+        height: 120px;
+        
+    }
+    
+    .brends-list--show-all{ /*МОДИФИКАТОР ПОКАЗАТЬ ВСЕ ЭЛЕМЕНТЫ*/
+        height: auto;
+    }
+    .read-more-button{
+        display: none;
+    }
+    
 }
+
 
 /*--------------СЕТКА 768---------------*/
 
-@media (min-width:768px) and (max-width: 1120px){
+@media (min-width:768px) and (max-width: 1119.9px){
     .header__title{
         padding-left: 24px;
     }
     .brends-list{
         column-gap: 24px;
         padding-left: 24px;
+        row-gap: 16px;
+        align-content: start;
     }
     .brends-list__brend{ 
         width: 224px;
     }
     .brends-list--show-all{ /*МОДИФИКАТОР ПОКАЗАТЬ ВСЕ ЭЛЕМЕНТЫ*/
-        height: 336px;
+        height: auto;
     }
 
 

@@ -5,79 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="discription" content="Авторизованный сервисный центр по ремонту техники Dell">
     <title>Brends List</title>
-    <link rel="stylesheet" href="brends-style.css">
+    <!-----------Подключаем стили------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="brends-style.css">
     <link rel="stylesheet" href="fonts/TTLakes/stylesheet.css">
 </head>
 
 <body>
+   
     <header class="header">
         <h1 class="header__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h1>
-    </header>
+    </header> 
 
-    <ul class="brends-list brends-list--show-part">
-        <li class="brend brends-list__brend brend--lenovo ">
-            <img src="images/brends/lenovo.svg" class="brend__img" alt="Логотип Lenovo">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
+        <div class="for-swiper "><!--  swiper  -->
 
-        <li class="brend brends-list__brend brend--samsung ">
-            <img src="images/brends/samsung.svg" class="brend__img" alt="Логотип Samsung">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--apple ">
-            <img src="images/brends/apple.svg" class="brend__img" alt="Логотип Apple">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--viewsonic ">
-            <img src="images/brends/viewsonic.svg" class="brend__img" alt="Логотип Viewsonic">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--bosh ">
-            <img src="images/brends/bosh.svg" class="brend__img" alt="Логотип Bosh">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--hp ">
-            <img src="images/brends/hp.svg" class="brend__img" alt="Логотип HP">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--acer ">
-            <img src="images/brends/acer.svg" class="brend__img" alt="Логотип Acer">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--sony ">
-            <img src="images/brends/sony.svg" class="brend__img" alt="Логотип Sony">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--lenovo ">
-            <img src="images/brends/lenovo.svg" class="brend__img" alt="Логотип Lenovo">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-
-        <li class="brend brends-list__brend brend--samsung ">
-            <img src="images/brends/samsung.svg" class="brend__img" alt="Логотип Samsung">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
+        <ul class="brends-list brends-list--show-part for-wrapper "><!--  swiper-wrapper  -->
         
-        <li class="brend brends-list__brend brend--apple ">
-            <img src="images/brends/apple.svg" class="brend__img" alt="Логотип Apple">
-            <a href="brends.html" class="brends-list__link link"></a>
-        </li>
-    </ul>
+        <div class="for-slide "><!--  swiper-slide  -->
+            <li class="brend brends-list__brend brend--lenovo">
+                <img src="images/brends/lenovo.svg" class="brend__img" alt="Логотип Lenovo">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--samsung ">
+                <img src="images/brends/samsung.svg" class="brend__img" alt="Логотип Samsung">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--apple ">
+                <img src="images/brends/apple.svg" class="brend__img" alt="Логотип Apple">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--viewsonic ">
+                <img src="images/brends/viewsonic.svg" class="brend__img" alt="Логотип Viewsonic">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--bosh ">
+                <img src="images/brends/bosh.svg" class="brend__img" alt="Логотип Bosh">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--hp ">
+                <img src="images/brends/hp.svg" class="brend__img" alt="Логотип HP">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--acer ">
+                <img src="images/brends/acer.svg" class="brend__img" alt="Логотип Acer">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+        
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--sony ">
+                <img src="images/brends/sony.svg" class="brend__img" alt="Логотип Sony">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--lenovo ">
+                <img src="images/brends/lenovo.svg" class="brend__img" alt="Логотип Lenovo">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--samsung ">
+                <img src="images/brends/samsung.svg" class="brend__img" alt="Логотип Samsung">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+
+        <div class="for-slide ">
+            <li class="brend brends-list__brend brend--apple ">
+                <img src="images/brends/apple.svg" class="brend__img" alt="Логотип Apple">
+                <a href="brends.html" class="brends-list__link link"></a>
+            </li>
+        </div>
+        
+        </ul>
+
+        <div class="for-pagination "></div> <!--  swiper-pagination  -->
+
+    </div>
 
     <footer class="footer">
-        <button class="read-more-button footer__read-more-button">
+        <button class="read-more-button footer__read-more-button ">
             Показать всё  
         </button>
-    </footer>
+    </footer> 
+
 
     <!-------Подключаем код JS------->
-    <script src="code/brends-code.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="code/brends-code.js" type=text/javascript></script>
 </body>
 </html>

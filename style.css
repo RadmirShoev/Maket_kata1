@@ -120,7 +120,7 @@ margin-right: 20px;
     /*сброс стиля фокуса*/
         outline: none;
     
-        background: url(images/icon.svg) no-repeat left center;
+        background: url(images/read-more-close.svg) no-repeat left center;
         width: 140px;
         height: 24px;
         display: block;
