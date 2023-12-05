@@ -42,6 +42,7 @@ html {
     margin:0;
     padding: 0;
     list-style: none;
+    width: 240px;
 }
 .brends-list__brend{ 
     display: flex;
@@ -50,17 +51,14 @@ html {
     flex-wrap: nowrap;
     
     box-sizing: border-box;
-    width: 100%;
+    width: 240;
     height: 72px;
     background-color: #FFF;
 
     border: 1px solid #EAEAEA;
     border-radius: 6px;
 }
-.brends-list__item{
-    width: 240px;
-}
-    
+
 .circle-button{
     display: block;
     padding: 0;
@@ -129,13 +127,13 @@ html {
         opacity: 0.7;
     }
 
-.footer__read-more-button {
+    .footer__read-more-button {
     margin-top: 24px;
     margin-left: 32px;
-}
+    }
 
 /*--------------СЕТКА 320---------------*/
-@media (max-width:767.9px){
+@media (max-width:767px){
     .header__title{
         padding-left: 16px ;
     }
@@ -144,13 +142,11 @@ html {
         margin: 0;
         padding-left: 0;
         padding-right: 0;
-       /* padding-top: 16px;*/
 
         display: flex;
         justify-content: flex-start;
         flex-wrap: nowrap;
         column-gap: 0;
-        /*width: 100%;*/
     }
 
     .swiper{
@@ -170,7 +166,7 @@ html {
     .read-more-button{
         display: none;
     }
-    
+
 }
 
 /*--------------СЕТКА 768---------------*/
@@ -189,6 +185,16 @@ html {
     }
     .brends-list__item{ 
         width: 224px;
+    } 
+    .for-pagination{
+        display: none;
     }
-    
+}
+/*--------------СЕТКА 1120---------------*/
+@media (min-width:1120px) {
+
+    .for-pagination{
+        display: none;
+    }
+
 }

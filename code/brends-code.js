@@ -68,15 +68,6 @@ let swiperInit = function(){
         slidesPerView: 1.2,
         spaceBetween: 16,
 
-        breakpoints: {
-            320: {
-                enable: true,
-            },
-            768: {
-                enabled: false,
-            }
-        },
-
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
