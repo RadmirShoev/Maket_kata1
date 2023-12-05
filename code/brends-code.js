@@ -6,27 +6,30 @@ let containerForSwiper = document.querySelector('.for-swiper');
 //Событие разворачивание сворачивание списка брендов
 readMoreButton.addEventListener('click', function() {
     let classes = brendsList.className.split(/\s+/);
-
+    
     for (let i = 0; i < classes.length; i++) {
+        
         if (classes[i] === 'brends-list--show-part') {
 
-            brendsList.classList.add('brends-list--show-all');
-            brendsList.classList.remove('brends-list--show-part');
+            let classes = brendsList.className.split(/\s+/);
 
+            brendsList.classList.remove('brends-list--show-part');
+        
             readMoreButton.classList.remove('read-more-button--close');
             readMoreButton.classList.add('read-more-button--open');
 
             readMoreButton.firstChild.data = 'Скрыть';
-
+            console.log('Удаляем brends-list--show-part - Развернуть список');
         } else {
 
-            brendsList.classList.remove('brends-list--show-all');
             brendsList.classList.add('brends-list--show-part');
 
             readMoreButton.classList.remove('read-more-button--open');
             readMoreButton.classList.add('read-more-button--slose');
 
             readMoreButton.firstChild.data = 'Показать всё';
+
+            console.log('Добавляем brends-list--show-part - Свернуть');
         }
     }
 })
@@ -34,6 +37,7 @@ readMoreButton.addEventListener('click', function() {
 /*---------------ОСНОВНАЯ ПРОГРАММА СО СВАЙПЕРОМ------------*/
 
 //Функция добавления классов свайпера
+
  function addSwiperClasses() {
     //Находим основные контейнеры для элементов Свайпера
     let containerForSwiper = document.querySelector('.for-swiper');
@@ -61,9 +65,17 @@ let swiperInit = function(){
 
     let swiper = new Swiper('.swiper', {
 
-        slidesPerView: 2,
-        spaceBetween: 150,
-        loop: true,
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+
+        breakpoints: {
+            320: {
+                enable: true,
+            },
+            768: {
+                enabled: false,
+            }
+        },
 
         pagination: {
             el: '.swiper-pagination',
