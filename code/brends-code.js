@@ -65,8 +65,9 @@ let swiperInit = function(){
 
     let swiper = new Swiper('.swiper', {
 
-        slidesPerView: 1.2,
+        slidesPerView: 'auto',
         spaceBetween: 16,
+        loop: true,
 
         pagination: {
             el: '.swiper-pagination',
